@@ -1,3 +1,31 @@
 [gd_scene format=3 uid="uid://br6xpr5iqnqyo"]
 
-[node name="Player" type="Node2D" unique_id=441110932]
+[ext_resource type="Script" uid="uid://njhm4ccxf8tj" path="res://Scenes/Player/Player.gd" id="1_ft8w5"]
+[ext_resource type="Texture2D" uid="uid://d2twas6sbh6jg" path="res://Assets/testAssets/Assetssss/Sprites/player.png" id="1_s0eop"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
+radius = 5.0
+height = 14.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1432339366]
+script = ExtResource("1_ft8w5")
+speed = 5.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1303164315]
+zoom = Vector2(3, 3)
+limit_enabled = false
+
+[node name="AgentAnimator" type="Node2D" parent="." unique_id=212861484]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AgentAnimator" unique_id=848951703]
+root_node = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentAnimator" unique_id=282718526]
+position = Vector2(0, -8)
+texture = ExtResource("1_s0eop")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=954838944]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_ft8w5")
