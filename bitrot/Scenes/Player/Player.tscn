@@ -9,6 +9,7 @@ height = 14.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1432339366]
 script = ExtResource("1_ft8w5")
+speed = 5.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1303164315]
 zoom = Vector2(3, 3)
