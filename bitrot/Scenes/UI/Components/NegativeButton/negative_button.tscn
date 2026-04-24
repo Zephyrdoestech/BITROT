@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ckarlk3041yd"]
+
+[ext_resource type="PackedScene" uid="uid://48hvbjhvso4o" path="res://Scenes/UI/Components/GameButton/GameButton.tscn" id="1_lhsr7"]
+[ext_resource type="Script" uid="uid://bp2vtglwrotc3" path="res://Scenes/UI/Components/NegativeButton/negative_button.gd" id="2_y752s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y752s"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="NegativeButton" unique_id=348457698 instance=ExtResource("1_lhsr7")]
+offset_right = 54.0
+offset_bottom = 23.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_y752s")
+script = ExtResource("2_y752s")
