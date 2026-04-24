@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://254tut4j68sm"]
 
+[ext_resource type="Script" uid="uid://v24njb8476op" path="res://Scenes/Levels/level_2.gd" id="1_jixyi"]
 [ext_resource type="PackedScene" uid="uid://br6xpr5iqnqyo" path="res://Scenes/Player/Player.tscn" id="1_qox7n"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="2_ramdh"]
 [ext_resource type="Script" uid="uid://ck6wes232r84m" path="res://Scenes/Levels/area_2d.gd" id="3_ramdh"]
@@ -94,8 +95,13 @@ sources/0 = SubResource("TileSetAtlasSource_jixyi")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jixyi"]
 
 [node name="Level2" type="Node2D" unique_id=532370135]
+script = ExtResource("1_jixyi")
+
+[node name="StartMarker" type="Marker2D" parent="." unique_id=111273494]
+position = Vector2(53, -10)
 
 [node name="Player" parent="." unique_id=1432339366 instance=ExtResource("1_qox7n")]
+jump_power = 10.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=698202863]
 position = Vector2(-2, 7)
@@ -106,7 +112,7 @@ tile_set = SubResource("TileSet_n6t8q")
 script = ExtResource("3_ramdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1171586256]
-position = Vector2(342, 161)
+position = Vector2(145, 163)
 shape = SubResource("WorldBoundaryShape2D_jixyi")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

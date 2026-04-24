@@ -12,6 +12,10 @@ var direction = 0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready() -> void:
+	GameManager.register_player(self)
+	PlayerManager.register_player(self)
+
 func _physics_process(delta):
 	#Add the gravity
 	if not is_on_floor():
@@ -33,4 +37,5 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	print("hit: ", body.name)
+	GameManager.respawn_player()
