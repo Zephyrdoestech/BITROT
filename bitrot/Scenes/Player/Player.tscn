@@ -14,6 +14,8 @@ speed = 5.0
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1303164315]
 zoom = Vector2(3, 3)
 limit_enabled = false
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
 
 [node name="AgentAnimator" type="Node2D" parent="." unique_id=212861484]
 
