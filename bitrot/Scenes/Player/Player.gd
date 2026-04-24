@@ -1,18 +1,20 @@
 extends CharacterBody2D
 
-@export var speed = 10.0
-@export var jump_power = 10.0
+@export var speed: float = 10.0
+@export var jump_power: float = 10.0
 
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
-var direction = 0
+var direction: float = 0.0
+var gravity: float = 0.0
 
 #const SPEED = 300.0
 #const JUMP_VELOCITY = -400.0
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 
 func _ready() -> void:
+	gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 	GameManager.register_player(self)
 	PlayerManager.register_player(self)
 
