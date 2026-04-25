@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://d4dd6fxfj3pla"]
+
+[ext_resource type="PackedScene" uid="uid://48hvbjhvso4o" path="res://Scenes/UI/Components/GameButton/GameButton.tscn" id="1_e4e6r"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=533727302]
+
+[node name="Control" type="Control" parent="." unique_id=784513515]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1935660450]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer" unique_id=2056610240]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer" unique_id=323149470]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="GameButton2" parent="Control/PanelContainer/MarginContainer/VBoxContainer" unique_id=348457698 instance=ExtResource("1_e4e6r")]
+layout_mode = 2
+text = "RESUME"
+
+[node name="GameButton3" parent="Control/PanelContainer/MarginContainer/VBoxContainer" unique_id=1411742810 instance=ExtResource("1_e4e6r")]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="GameButton4" parent="Control/PanelContainer/MarginContainer/VBoxContainer" unique_id=228968743 instance=ExtResource("1_e4e6r")]
+layout_mode = 2
+text = "QUIT"
