@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b83qn3pigkoyf"]
+
+[ext_resource type="Script" uid="uid://d2be87rphu63w" path="res://Scenes/Objects/coding_window.gd" id="1_mve8n"]
+
+[node name="CodingWindow" type="CanvasLayer" unique_id=1710184668]
+script = ExtResource("1_mve8n")
+
+[node name="Control" type="Control" parent="." unique_id=1830142289]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=305337974]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=1621086078]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Option 1" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1785110982]
+layout_mode = 2
+
+[node name="Option 2" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1569930966]
+layout_mode = 2
+
+[node name="Option 3" type="Label" parent="Control/Panel/VBoxContainer" unique_id=695666804]
+layout_mode = 2
+
+[node name="►" type="Label" parent="Control/Panel" unique_id=1633088249]
+layout_mode = 0
+offset_top = 81.0
+offset_right = 40.0
+offset_bottom = 104.0
