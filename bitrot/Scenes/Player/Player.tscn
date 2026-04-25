@@ -12,7 +12,7 @@ script = ExtResource("1_ft8w5")
 speed = 5.0
 cayote_timer = NodePath("CayoteJump")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1303164315]
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=801511472]
 zoom = Vector2(3, 3)
 limit_enabled = false
 position_smoothing_enabled = true
