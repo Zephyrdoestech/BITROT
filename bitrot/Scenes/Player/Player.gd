@@ -25,6 +25,7 @@ func _physics_process(delta):
 	#Add the gravity
 	if not is_on_floor():
 		if velocity.y > 0:
+			velocity.y += gravity * 1.5 * delta
 			anim.play("fall")
 		else:
 			velocity.y += gravity * delta
