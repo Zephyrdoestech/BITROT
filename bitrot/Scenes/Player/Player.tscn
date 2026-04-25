@@ -1,87 +1,27 @@
 [gd_scene format=3 uid="uid://br6xpr5iqnqyo"]
 
 [ext_resource type="Script" uid="uid://njhm4ccxf8tj" path="res://Scenes/Player/Player.gd" id="1_ft8w5"]
-[ext_resource type="Texture2D" uid="uid://cvhhr2yunt4c4" path="res://Assets/Sprites/INIT_spritesheet.png" id="2_ft8w5"]
+[ext_resource type="Texture2D" uid="uid://d2twas6sbh6jg" path="res://Assets/testAssets/Assetssss/Sprites/player.png" id="1_s0eop"]
 
 [sub_resource type="Animation" id="Animation_ft8w5"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AgentAnimator/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_t26db"]
 resource_name = "death"
 
 [sub_resource type="Animation" id="Animation_jmcll"]
 resource_name = "fall"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AgentAnimator/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [16]
-}
 
 [sub_resource type="Animation" id="Animation_h54ih"]
 resource_name = "idle"
 length = 0.3
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AgentAnimator/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 2]
-}
 
 [sub_resource type="Animation" id="Animation_4wape"]
 resource_name = "jump"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AgentAnimator/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [24, 24]
-}
 
 [sub_resource type="Animation" id="Animation_ude3g"]
 resource_name = "walk"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AgentAnimator/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [8, 9, 10, 11, 12, 13, 14, 15]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ude3g"]
 _data = {
@@ -94,8 +34,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
-radius = 5.0
-height = 14.0
+radius = 9.0
+height = 22.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1432339366 node_paths=PackedStringArray("cayote_timer")]
 script = ExtResource("1_ft8w5")
@@ -115,14 +55,15 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_ude3g")
 
 [node name="Sprite2D" type="Sprite2D" parent="AgentAnimator" unique_id=647663423]
-position = Vector2(1.0000005, -5.98)
-texture = ExtResource("2_ft8w5")
-hframes = 8
-vframes = 5
+z_index = 1
+position = Vector2(0.49999988, -11.75)
+scale = Vector2(1.1874999, 1.34375)
+texture = ExtResource("1_s0eop")
+hframes = 7
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=954838944]
-visible = false
-position = Vector2(0, -7)
+position = Vector2(0, -11)
 shape = SubResource("CapsuleShape2D_ft8w5")
 
 [node name="CayoteJump" type="Timer" parent="." unique_id=1019333085]
