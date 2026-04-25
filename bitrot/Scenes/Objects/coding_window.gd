@@ -1,7 +1,8 @@
 extends CanvasLayer
 
-signal option_selected(index: int, is_toggled: bool)
+signal option_selected(bubble_id: int, index: int, is_toggled: bool)
 
+var all_toggled: Dictionary = {}
 var options_default: Array = []   # original labels
 var options_toggled: Array = []   # opposite labels
 var toggled: Array = [false, false, false]  # current state per option
@@ -11,13 +12,28 @@ func _ready() -> void:
 	visible = false
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
-func open(defaults: Array, opposites: Array) -> void:
+func open(id: int, defaults: Array, opposites: Array) -> void:
+	current_bubble_id = id
 	options_default = defaults
 	options_toggled = opposites
+	# load this bubble's saved state, or default to all false
+	if not all_toggled.has(id):
+		all_toggled[id] = [false, false, false]
+	toggled = all_toggled[id]
 	visible = true
 	selected = 0
 	update_labels()
 	update_cursor()
+
+var current_bubble_id: int = 0
+
+func choose_option(index: int) -> void:
+	toggled[index] = !toggled[index]
+	all_toggled[current_bubble_id] = toggled  # save state back
+	update_labels()
+	update_cursor()
+	emit_signal("option_selected", current_bubble_id, index, toggled[index])
+	close()
 
 func close() -> void:
 	visible = false
@@ -37,14 +53,6 @@ func _process(_delta) -> void:
 
 	if Input.is_action_just_pressed("accept"):
 		choose_option(selected)
-
-func choose_option(index: int) -> void:
-	# flip the toggle state for that option only
-	toggled[index] = !toggled[index]
-	update_labels()
-	update_cursor()
-	emit_signal("option_selected", index, toggled[index])
-	close()
 
 func update_labels() -> void:
 	var option_nodes = $Control/Panel/VBoxContainer.get_children()

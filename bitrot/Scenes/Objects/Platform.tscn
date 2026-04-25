@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://630mhlps8j43"]
+[gd_scene format=3 uid="uid://ct0roar2v4nfv"]
 
-[ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="1_iowda"]
+[ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="1_6ofpv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bktn"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyh3f"]
 size = Vector2(79.75, 15)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nl8n"]
-texture = ExtResource("1_iowda")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ducwx"]
+texture = ExtResource("1_6ofpv")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -48,15 +48,15 @@ texture = ExtResource("1_iowda")
 2:7/0 = 0
 3:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_x8n5u"]
-sources/0 = SubResource("TileSetAtlasSource_3nl8n")
+[sub_resource type="TileSet" id="TileSet_hs11j"]
+sources/0 = SubResource("TileSetAtlasSource_ducwx")
 
-[node name="HighPlatform" type="StaticBody2D" unique_id=217706217]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=10139939]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1424726414]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1685932150]
 position = Vector2(7.875, 7.5)
-shape = SubResource("RectangleShape2D_5bktn")
+shape = SubResource("RectangleShape2D_iyh3f")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=931503752]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=672630799]
 tile_map_data = PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 3, 0, 0, 0)
-tile_set = SubResource("TileSet_x8n5u")
+tile_set = SubResource("TileSet_hs11j")
