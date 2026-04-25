@@ -22,6 +22,7 @@ config/icon="uid://emaamxmhu6qm"
 GameManager="*uid://cdy2vrvbgrpsy"
 PlayerManager="*uid://cop5uarrd6lce"
 CodingWindow="*uid://b83qn3pigkoyf"
+SceneManager="*uid://c36equa2pejxh"
 
 [display]
 

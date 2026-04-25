@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r1rmnr3g3lhg"
-path="res://.godot/imported/CommandLineTileset.png-4587b33490b1296a8a41893bac144312.ctex"
+uid="uid://c5j5wsrya1f4q"
+path="res://.godot/imported/4 Conjoined Spikes.png-36f10fecc735359253aff50fadebd124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/finalAssets/Scenes/CommandLineTileset.png"
-dest_files=["res://.godot/imported/CommandLineTileset.png-4587b33490b1296a8a41893bac144312.ctex"]
+source_file="res://Assets/testAssets/Assetssss/Objects/4 Conjoined Spikes.png"
+dest_files=["res://.godot/imported/4 Conjoined Spikes.png-36f10fecc735359253aff50fadebd124.ctex"]
 
 [params]
 

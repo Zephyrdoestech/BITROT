@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c36equa2pejxh"]
+
+[ext_resource type="Script" uid="uid://ctd24ipqk334n" path="res://Scenes/Managers/SceneManager/SceneManager.gd" id="1_v8dxa"]
+[ext_resource type="Script" uid="uid://cwtmccvtiikeh" path="res://Resources/SceneData.gd" id="2_allic"]
+[ext_resource type="Resource" uid="uid://bcy205mi4p6wf" path="res://Resources/Scenes/levels.tres" id="3_h5xtf"]
+[ext_resource type="Resource" uid="uid://cuy13r38q4vrb" path="res://Resources/Scenes/level_1.tres" id="4_eonc6"]
+[ext_resource type="Resource" uid="uid://uu2typsl7gok" path="res://Resources/Scenes/game_level.tres" id="5_allic"]
+[ext_resource type="Resource" uid="uid://sih4snkethoe" path="res://Resources/Scenes/level_2.tres" id="5_kh0fi"]
+[ext_resource type="Resource" uid="uid://b7jh66brxcir3" path="res://Resources/Scenes/level_3.tres" id="6_777k6"]
+[ext_resource type="Resource" uid="uid://csgayltf06a4c" path="res://Resources/Scenes/main_menu.tres" id="7_2lo4y"]
+
+[node name="SceneManager" type="Node" unique_id=125353925]
+script = ExtResource("1_v8dxa")
+scene_list = Array[ExtResource("2_allic")]([ExtResource("3_h5xtf"), ExtResource("7_2lo4y"), ExtResource("5_allic"), ExtResource("4_eonc6"), ExtResource("5_kh0fi"), ExtResource("6_777k6")])

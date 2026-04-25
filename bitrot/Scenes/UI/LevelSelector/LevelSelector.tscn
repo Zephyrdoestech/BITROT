@@ -38,26 +38,30 @@ layout_mode = 2
 theme_override_constants/separation = 10
 vertical = true
 
-[node name="GameButton" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=348457698 instance=ExtResource("2_lxvek")]
+[node name="level1" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=348457698 instance=ExtResource("2_lxvek")]
 custom_minimum_size = Vector2(159, 50)
 layout_mode = 2
 text = "Level 1"
+transition_scene_key = "level_1"
 
-[node name="GameButton2" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=829921922 instance=ExtResource("2_lxvek")]
+[node name="level2" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=829921922 instance=ExtResource("2_lxvek")]
 custom_minimum_size = Vector2(159, 50)
 layout_mode = 2
 text = "Level 2"
+transition_scene_key = "level_2"
 
-[node name="GameButton3" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=558963526 instance=ExtResource("2_lxvek")]
+[node name="level3" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=558963526 instance=ExtResource("2_lxvek")]
 custom_minimum_size = Vector2(159, 50)
 layout_mode = 2
 text = "Level 3"
+transition_scene_key = "level_3"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ARTBG_HERE/MarginContainer" unique_id=62655540]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="GameButton3" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=29806862 instance=ExtResource("2_lxvek")]
+[node name="MainMenu" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=29806862 instance=ExtResource("2_lxvek")]
 layout_mode = 2
 text = "BACK"
+transition_scene_key = "main_menu"

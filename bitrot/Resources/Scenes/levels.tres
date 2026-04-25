@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SceneData" format=3 uid="uid://bcy205mi4p6wf"]
+
+[ext_resource type="PackedScene" uid="uid://c0bnt1sojjg26" path="res://Scenes/UI/LevelSelector/LevelSelector.tscn" id="1_0cbbd"]
+[ext_resource type="Script" uid="uid://cwtmccvtiikeh" path="res://Resources/SceneData.gd" id="1_gsiro"]
+
+[resource]
+script = ExtResource("1_gsiro")
+key = "levels"
+scene = ExtResource("1_0cbbd")
+metadata/_custom_type_script = "uid://cwtmccvtiikeh"

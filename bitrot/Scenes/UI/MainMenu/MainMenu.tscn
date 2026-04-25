@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://ca2v8n1ypcywb"]
+[gd_scene format=3 uid="uid://cncb6cr6ksqs6"]
 
-[ext_resource type="Texture2D" uid="uid://d2twas6sbh6jg" path="res://Assets/testAssets/Assetssss/Sprites/player.png" id="1_g18y6"]
-[ext_resource type="PackedScene" uid="uid://48hvbjhvso4o" path="res://Scenes/UI/Components/GameButton/GameButton.tscn" id="2_mjmdf"]
+[ext_resource type="Texture2D" uid="uid://d2twas6sbh6jg" path="res://Assets/testAssets/Assetssss/Sprites/player.png" id="2_gwdte"]
+[ext_resource type="PackedScene" uid="uid://48hvbjhvso4o" path="res://Scenes/UI/Components/GameButton/GameButton.tscn" id="3_7nukq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjmdf"]
-texture = ExtResource("1_g18y6")
+texture = ExtResource("2_gwdte")
 
 [node name="MainMenu" type="Control" unique_id=1255529108]
 layout_mode = 3
@@ -39,14 +39,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="Spin" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=348457698 instance=ExtResource("2_mjmdf")]
+[node name="Spin" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=348457698 instance=ExtResource("3_7nukq")]
 layout_mode = 2
 text = "SPIN"
 
-[node name="Play" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=902965373 instance=ExtResource("2_mjmdf")]
+[node name="Play" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=902965373 instance=ExtResource("3_7nukq")]
 layout_mode = 2
 text = "PLAY"
+transition_scene_key = "levels"
 
-[node name="Credits" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=2012487435 instance=ExtResource("2_mjmdf")]
+[node name="Credits" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=2012487435 instance=ExtResource("3_7nukq")]
 layout_mode = 2
 text = "CREDITS"

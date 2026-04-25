@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://v24njb8476op" path="res://Scenes/Levels/level_2.gd" id="1_jixyi"]
 [ext_resource type="PackedScene" uid="uid://br6xpr5iqnqyo" path="res://Scenes/Player/Player.tscn" id="1_qox7n"]
+[ext_resource type="Texture2D" uid="uid://cffgypqde3poe" path="res://Assets/finalAssets/Scenes/level-2-bg.jpg" id="2_axppo"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="2_ramdh"]
 [ext_resource type="Script" uid="uid://ck6wes232r84m" path="res://Scenes/Levels/area_2d.gd" id="3_ramdh"]
 [ext_resource type="Script" uid="uid://b30pjksh1gwhs" path="res://Scenes/Levels/exit_zone.gd" id="5_n6t8q"]
+[ext_resource type="PackedScene" uid="uid://fxvuysjyl3iw" path="res://Scenes/Objects/FallingSpike.tscn" id="6_4ju3q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ju3q"]
 texture = ExtResource("2_ramdh")
@@ -101,10 +103,18 @@ size = Vector2(27, 29)
 [node name="Level2" type="Node2D" unique_id=532370135]
 script = ExtResource("1_jixyi")
 
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=143479530]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1183036016]
+position = Vector2(-786, -768)
+texture = ExtResource("2_axppo")
+centered = false
+
 [node name="StartMarker" type="Marker2D" parent="." unique_id=111273494]
 position = Vector2(53, -10)
 
-[node name="Player" parent="." unique_id=1432339366 instance=ExtResource("1_qox7n")]
+[node name="Player" parent="." unique_id=1432339366 groups=["player"] instance=ExtResource("1_qox7n")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=698202863]
 position = Vector2(-2, 7)
@@ -125,6 +135,9 @@ next_level = "res://Scenes/Levels/Level_3.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone" unique_id=2044712169]
 position = Vector2(-6, -413)
 shape = SubResource("RectangleShape2D_axppo")
+
+[node name="FallingSpike" parent="." unique_id=983929909 instance=ExtResource("6_4ju3q")]
+position = Vector2(708, -103)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]
