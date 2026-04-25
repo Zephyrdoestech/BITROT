@@ -120,11 +120,7 @@ shape = SubResource("WorldBoundaryShape2D_ducwx")
 script = ExtResource("4_87l2y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone" unique_id=1160393099]
-<<<<<<< Updated upstream
-position = Vector2(1404, -25)
-=======
-position = Vector2(1527, 33)
->>>>>>> Stashed changes
+position = Vector2(1525, 33)
 shape = SubResource("RectangleShape2D_qpfou")
 
 [node name="CodingBubble" parent="." unique_id=2039141504 instance=ExtResource("6_ybqp2")]

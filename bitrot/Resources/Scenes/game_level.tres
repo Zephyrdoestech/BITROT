@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SceneData" format=3 uid="uid://uu2typsl7gok"]
+
+[ext_resource type="PackedScene" uid="uid://cjvsm0l1hwrpp" path="res://Scenes/UI/GameViewport/GameViewport.tscn" id="1_a6jq5"]
+[ext_resource type="Script" uid="uid://cwtmccvtiikeh" path="res://Resources/SceneData.gd" id="2_ecday"]
+
+[resource]
+script = ExtResource("2_ecday")
+key = "game_level"
+scene = ExtResource("1_a6jq5")
+metadata/_custom_type_script = "uid://cwtmccvtiikeh"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SceneData" format=3 uid="uid://csgayltf06a4c"]
+
+[ext_resource type="Script" uid="uid://cwtmccvtiikeh" path="res://Resources/SceneData.gd" id="1_77vcf"]
+[ext_resource type="PackedScene" uid="uid://cncb6cr6ksqs6" path="res://Scenes/UI/MainMenu/MainMenu.tscn" id="1_oqdti"]
+
+[resource]
+script = ExtResource("1_77vcf")
+key = "main_menu"
+scene = ExtResource("1_oqdti")
+metadata/_custom_type_script = "uid://cwtmccvtiikeh"
