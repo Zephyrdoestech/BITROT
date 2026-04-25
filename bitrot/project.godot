@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BITROT"
-run/main_scene="uid://ks2t4g4qjq6c"
+run/main_scene="uid://cjvsm0l1hwrpp"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 GameManager="*uid://cdy2vrvbgrpsy"
 PlayerManager="*uid://cop5uarrd6lce"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
 
 [input]
 
@@ -44,4 +49,5 @@ move_right={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
