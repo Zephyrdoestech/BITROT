@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://twi223e5hnhf"]
+
+[ext_resource type="Script" uid="uid://cjnsucn22b7mr" path="res://Scenes/Objects/falling_spike.gd" id="1_57qnh"]
+[ext_resource type="Texture2D" uid="uid://c5j5wsrya1f4q" path="res://Assets/testAssets/Assetssss/Objects/4 Conjoined Spikes.png" id="2_2y1l2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr3yy"]
+size = Vector2(43, 10.5)
+
+[node name="FallingSpike" type="Area2D" unique_id=983929909]
+script = ExtResource("1_57qnh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1425611994]
+position = Vector2(0.4999998, 0.7500001)
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_dr3yy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=727666966]
+rotation = 3.1415927
+texture = ExtResource("2_2y1l2")
