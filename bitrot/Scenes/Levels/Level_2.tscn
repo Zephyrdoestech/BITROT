@@ -119,13 +119,13 @@ script = ExtResource("3_ramdh")
 position = Vector2(145, 163)
 shape = SubResource("WorldBoundaryShape2D_jixyi")
 
-[node name="ExitZone" type="Area2D" parent="Area2D" unique_id=664514241]
+[node name="ExitZone" type="Area2D" parent="." unique_id=664514241]
 script = ExtResource("5_n6t8q")
 next_level = "res://Scenes/Levels/Level_3.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/ExitZone" unique_id=2044712169]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone" unique_id=2044712169]
 position = Vector2(860, -346)
 shape = SubResource("RectangleShape2D_axppo")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D/ExitZone" to="Area2D/ExitZone" method="_on_body_entered"]
+[connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BITROT"
-run/main_scene="uid://ks2t4g4qjq6c"
+run/main_scene="uid://cjvsm0l1hwrpp"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/stretch_mode=5
 boot_splash/image="uid://u0aoxapaj6a2"
@@ -22,6 +22,11 @@ config/icon="uid://emaamxmhu6qm"
 GameManager="*uid://cdy2vrvbgrpsy"
 PlayerManager="*uid://cop5uarrd6lce"
 CodingWindow="*uid://b83qn3pigkoyf"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
 
 [input]
 
@@ -62,4 +67,5 @@ down={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

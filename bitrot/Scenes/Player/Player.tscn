@@ -7,12 +7,12 @@
 radius = 5.0
 height = 14.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1432339366]
+[node name="Player" type="CharacterBody2D" unique_id=1432339366 node_paths=PackedStringArray("cayote_timer")]
 script = ExtResource("1_ft8w5")
 speed = 5.0
-jump_power = null
+cayote_timer = NodePath("CayoteJump")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1303164315]
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=801511472]
 zoom = Vector2(3, 3)
 limit_enabled = false
 position_smoothing_enabled = true
@@ -32,3 +32,7 @@ region_rect = Rect2(0, 0, 16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=954838944]
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_ft8w5")
+
+[node name="CayoteJump" type="Timer" parent="." unique_id=1019333085]
+wait_time = 0.05
+one_shot = true

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://48hvbjhvso4o"]
+
+[ext_resource type="Script" uid="uid://dnejlvqblhlvw" path="res://Scenes/UI/Components/GameButton/game_button.gd" id="1_8h2k8"]
+
+[node name="GameButton" type="Button" unique_id=348457698]
+custom_minimum_size = Vector2(100, 0)
+offset_right = 62.0
+offset_bottom = 31.0
+text = "Button"
+script = ExtResource("1_8h2k8")
