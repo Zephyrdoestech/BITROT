@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var speed: float = 10.0
 @export var jump_power: float = 10.0
 @export var cayote_timer: Timer;
+@onready var anim = $AgentAnimator/AnimationPlayer
+
 
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
@@ -22,7 +24,16 @@ func _ready() -> void:
 func _physics_process(delta):
 	#Add the gravity
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		if velocity.y > 0:
+			velocity.y += gravity * 1.5 * delta
+			anim.play("fall")
+		else:
+			velocity.y += gravity * delta
+			anim.play("jump")
+	elif direction != 0:
+		anim.play("walk")	
+	else:
+		anim.play("idle")
 	
 	# cayote jump logic (better for the lungs)
 	if was_on_floor && !is_on_floor() && velocity.y >= 0:

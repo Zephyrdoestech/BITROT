@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3m7hv32hly5a"
-path="res://.godot/imported/terminalBubble-2.png-75ce1ff0bd162708276297e0a8da5011.ctex"
+uid="uid://ctqosi56dnhjr"
+path="res://.godot/imported/Tileset_Level1.png-f9049b33f5b2f8ee60bb7065f64a32b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/finalAssets/Scenes/terminalBubble-2.png"
-dest_files=["res://.godot/imported/terminalBubble-2.png-75ce1ff0bd162708276297e0a8da5011.ctex"]
+source_file="res://Assets/finalAssets/Scenes/Tileset_Level1.png"
+dest_files=["res://.godot/imported/Tileset_Level1.png-f9049b33f5b2f8ee60bb7065f64a32b8.ctex"]
 
 [params]
 
