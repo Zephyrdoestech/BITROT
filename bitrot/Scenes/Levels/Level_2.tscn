@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="2_ramdh"]
 [ext_resource type="Script" uid="uid://ck6wes232r84m" path="res://Scenes/Levels/area_2d.gd" id="3_ramdh"]
 [ext_resource type="Script" uid="uid://b30pjksh1gwhs" path="res://Scenes/Levels/exit_zone.gd" id="5_n6t8q"]
+[ext_resource type="PackedScene" uid="uid://twi223e5hnhf" path="res://Scenes/Objects/FallingSpike.tscn" id="6_4ju3q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ju3q"]
 texture = ExtResource("2_ramdh")
@@ -104,7 +105,7 @@ script = ExtResource("1_jixyi")
 [node name="StartMarker" type="Marker2D" parent="." unique_id=111273494]
 position = Vector2(53, -10)
 
-[node name="Player" parent="." unique_id=1432339366 instance=ExtResource("1_qox7n")]
+[node name="Player" parent="." unique_id=1432339366 groups=["player"] instance=ExtResource("1_qox7n")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=698202863]
 position = Vector2(-2, 7)
@@ -125,6 +126,9 @@ next_level = "res://Scenes/Levels/Level_3.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone" unique_id=2044712169]
 position = Vector2(-6, -413)
 shape = SubResource("RectangleShape2D_axppo")
+
+[node name="FallingSpike" parent="." unique_id=983929909 instance=ExtResource("6_4ju3q")]
+position = Vector2(708, -103)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]
