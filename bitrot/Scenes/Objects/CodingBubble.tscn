@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bnvwt2yjq0fi6"]
+
+[ext_resource type="Script" uid="uid://qw2pxlq8aqa2" path="res://Scenes/Objects/coding_bubble.gd" id="1_mve8n"]
+[ext_resource type="Texture2D" uid="uid://i5k4vrs8elk6" path="res://icon.svg" id="1_q74fl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6qla5"]
+radius = 11.18034
+
+[node name="CodingBubble" type="Area2D" unique_id=2039141504]
+script = ExtResource("1_mve8n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139161627]
+shape = SubResource("CircleShape2D_6qla5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1058885194]
+position = Vector2(0, -1.1920929e-07)
+scale = Vector2(0.12499997, 0.1328125)
+texture = ExtResource("1_q74fl")
+
+[node name="InteractPrompt" type="Label" parent="." unique_id=2145474734]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
