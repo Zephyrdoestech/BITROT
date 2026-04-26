@@ -4,6 +4,9 @@ extends Node2D
 @onready var platform2 = $Platform2
 @onready var platform3 = $Platform3
 @onready var platform4 = $Platform4
+@onready var spike2 = $FallingSpike2
+@onready var spike3 = $FallingSpike3
+@onready var spike4 = $FallingSpike4
 
 
 func _ready() -> void:
@@ -40,6 +43,23 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 				2:  
 					toggle_platform(platform)
 					toggle_platform(platform2)
+		2: 
+			match index:
+				0:
+					if is_toggled:
+						spike2.slow_down()
+					else:
+						spike2.speed_up()
+				1:
+					if is_toggled:
+						spike3.slow_down()
+					else:
+						spike3.speed_up()
+				2:
+					if is_toggled:
+						spike4.slow_down()
+					else:
+						spike4.speed_up()
 
 func lower_platform(platform: Node2D) -> void:
 	var tween = create_tween()
