@@ -7,6 +7,7 @@ var options_default: Array = []   # original labels
 var options_toggled: Array = []   # opposite labels
 var toggled: Array = [false, false, false]  # current state per option
 var selected: int = 0
+var blocked_indices: Array = []
 
 func _ready() -> void:
 	visible = false
@@ -28,8 +29,13 @@ func open(id: int, defaults: Array, opposites: Array) -> void:
 var current_bubble_id: int = 0
 
 func choose_option(index: int) -> void:
+	if index in blocked_indices:
+		# show popup WITHOUT closing or toggling
+		$BlockedPopup.visible = true
+		$Control.visible = false
+		return  # stop here, don't toggle, don't emit, don't close
 	toggled[index] = !toggled[index]
-	all_toggled[current_bubble_id] = toggled  # save state back
+	all_toggled[current_bubble_id] = toggled
 	update_labels()
 	update_cursor()
 	emit_signal("option_selected", current_bubble_id, index, toggled[index])
@@ -42,6 +48,13 @@ func close() -> void:
 func _process(_delta) -> void:
 	if not visible:
 		return
+		
+		
+	if $BlockedPopup.visible:
+		if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("interact"):
+			$BlockedPopup.visible = false
+			$Control.visible = true
+		return  
 
 	if Input.is_action_just_pressed("up"):
 		selected = max(0, selected - 1)
@@ -65,3 +78,7 @@ func update_cursor() -> void:
 	for i in option_nodes.size():
 		option_nodes[i].add_theme_color_override("font_color",
 			Color.WHITE if i == selected else Color(0.5, 0.5, 0.5))
+
+func show_blocked() -> void:
+	$BlockedPopup.visible = true
+	$Control.visible = false  # hide options behind it

@@ -113,7 +113,7 @@ position = Vector2(34, -23)
 
 [node name="Player" parent="." unique_id=1432339366 instance=ExtResource("1_q8yj7")]
 z_index = 1
-position = Vector2(34, -5)
+position = Vector2(64, -3)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1047952778]
 position = Vector2(-2, 7)
