@@ -82,3 +82,9 @@ func update_cursor() -> void:
 func show_blocked() -> void:
 	$BlockedPopup.visible = true
 	$Control.visible = false  # hide options behind it
+
+func reset() -> void:
+	all_toggled = {}
+	toggled = [false, false, false]
+	blocked_indices = []
+	visible = false

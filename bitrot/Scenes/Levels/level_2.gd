@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var platform = $Platform
+@onready var platform2 = $Platform2
+@onready var platform3 = $Platform3
+@onready var platform4 = $Platform4
+
 
 func _ready() -> void:
 	GameManager.respawn_point = $StartMarker.global_position
@@ -24,6 +28,18 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 						hide_platform(platform)
 					else:
 						show_platform(platform)
+		1:  
+			match index:
+				0:  
+					toggle_platform(platform)
+					toggle_platform(platform3)
+				1:  
+					toggle_platform(platform)
+					toggle_platform(platform2)
+					toggle_platform(platform3)
+				2:  
+					toggle_platform(platform)
+					toggle_platform(platform2)
 
 func lower_platform(platform: Node2D) -> void:
 	var tween = create_tween()
@@ -51,3 +67,9 @@ func show_platform(platform: Node2D) -> void:
 
 func show_blocked_message() -> void:
 	CodingWindow.show_blocked()
+
+func toggle_platform(target: Node2D) -> void:
+	if target.visible:
+		hide_platform(target)
+	else:
+		show_platform(target)

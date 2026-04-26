@@ -44,7 +44,7 @@ func _wait_at_ceiling():
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		print("Player hit! Restarting level...")
-		get_tree().reload_current_scene()
+		GameManager.restart_level()
 	else:
 		# HIT THE FLOOR!
 		if floor_y == 0.0:

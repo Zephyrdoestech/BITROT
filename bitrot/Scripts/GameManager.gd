@@ -16,6 +16,7 @@ func register_player(p: CharacterBody2D) -> void:
 
 # ── RESPAWN LOGIC ─────────────────────────────────────────
 func respawn_player() -> void:
+	CodingWindow.reset()  # ← add this too
 	if player:
 		player.global_position = respawn_point
 		player.velocity = Vector2.ZERO
@@ -26,7 +27,9 @@ func load_level(path: String) -> void:
 	get_tree().change_scene_to_file(path)
 
 func restart_level() -> void:
-	get_tree().change_scene_to_file(current_level)
+	print("restarting level")
+	CodingWindow.reset()
+	get_tree().reload_current_scene()
 
 # ── PAUSE ─────────────────────────────────────────────────
 func pause_game() -> void:
