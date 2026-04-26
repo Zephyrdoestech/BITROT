@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://c0bnt1sojjg26"]
 
-[ext_resource type="Texture2D" uid="uid://i5k4vrs8elk6" path="res://icon.svg" id="1_e12lc"]
+[ext_resource type="Texture2D" uid="uid://svldamfjol8g" path="res://Assets/finalAssets/Scenes/TitleScreen.png" id="1_e12lc"]
 [ext_resource type="PackedScene" uid="uid://48hvbjhvso4o" path="res://Scenes/UI/Components/GameButton/GameButton.tscn" id="2_lxvek"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jumw4"]
-texture = ExtResource("1_e12lc")
 
 [node name="LevelSelector" type="Control" unique_id=1643573243]
 layout_mode = 3
@@ -14,54 +11,58 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ARTBG_HERE" type="PanelContainer" parent="." unique_id=99355386]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1091399215]
+z_index = -4096
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_jumw4")
+texture = ExtResource("1_e12lc")
+expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="ARTBG_HERE" unique_id=1384524803]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1384524803]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="CenterContainer" type="CenterContainer" parent="ARTBG_HERE/MarginContainer" unique_id=1967998596]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=1967998596]
 layout_mode = 2
 
-[node name="VBoxContainer" type="BoxContainer" parent="ARTBG_HERE/MarginContainer/CenterContainer" unique_id=266909741]
+[node name="VBoxContainer" type="BoxContainer" parent="MarginContainer/CenterContainer" unique_id=266909741]
 layout_mode = 2
 theme_override_constants/separation = 10
 vertical = true
 
-[node name="level1" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=348457698 instance=ExtResource("2_lxvek")]
+[node name="level1" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=348457698 instance=ExtResource("2_lxvek")]
 custom_minimum_size = Vector2(159, 50)
 layout_mode = 2
 text = "Level 1"
 transition_scene_key = "level_1"
 
-[node name="level2" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=829921922 instance=ExtResource("2_lxvek")]
+[node name="level2" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=829921922 instance=ExtResource("2_lxvek")]
 custom_minimum_size = Vector2(159, 50)
 layout_mode = 2
 text = "Level 2"
 transition_scene_key = "level_2"
 
-[node name="level3" parent="ARTBG_HERE/MarginContainer/CenterContainer/VBoxContainer" unique_id=558963526 instance=ExtResource("2_lxvek")]
+[node name="level3" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=558963526 instance=ExtResource("2_lxvek")]
 custom_minimum_size = Vector2(159, 50)
 layout_mode = 2
 text = "Level 3"
 transition_scene_key = "level_3"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ARTBG_HERE/MarginContainer" unique_id=62655540]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=62655540]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="MainMenu" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=29806862 instance=ExtResource("2_lxvek")]
+[node name="MainMenu" parent="MarginContainer/HBoxContainer" unique_id=29806862 instance=ExtResource("2_lxvek")]
 layout_mode = 2
 text = "BACK"
 transition_scene_key = "main_menu"

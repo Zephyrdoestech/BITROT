@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BITROT"
-run/main_scene="uid://cjvsm0l1hwrpp"
+run/main_scene="uid://cncb6cr6ksqs6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/stretch_mode=5
 boot_splash/image="uid://u0aoxapaj6a2"
