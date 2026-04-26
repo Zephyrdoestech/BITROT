@@ -1,6 +1,19 @@
 # 2D Platformer/Puzzle Game — BITROT
 
-A 2D platformer and puzzle-solving game built in Godot 4.
+BITROT
+You are a lost pointer in a dying machine. Your instructions are clear: point to your destination. The problem? The destination header is corrupted, the memory banks are decaying, and a NullPointerException is a death sentence.
+
+In BITROT, a precision 2D platformer, you must navigate the skeletal remains of an outdated OS. To survive the encroaching system failure, you won’t just jump and dash— you’ll debug.
+
+Core Gameplay
+- Execute & Traverse: Move through a fractured digital world where the platforms are as unstable as the code they’re built on.
+
+- CTRL-C, CTRL-V: Connect broken lines of code in real-time to bridge gaps, bypass logic gates, and rewrite the environment to your advantage.
+
+- Memory Recovery: Collect fragmented data packets to reconstruct your original assignment and discover what—or who—you were meant to find.
+
+The Mission
+The system is crashing, the sectors are rotting, and the garbage collector is closing in. Find your address. Initialize your purpose. Don't return Null.
 
 ---
 
