@@ -17,6 +17,19 @@ The system is crashing, the sectors are rotting, and the garbage collector is cl
 
 ---
 
+##Credits
+
+#Developers
+Darryll Eral, Lance Chan, Glenshayne Belarmino
+
+#Extras
+Chrisnel Caipang, Gian Cedrick Epilan, Harold Shichiya Amistad
+
+#Artists
+Sophia Logarta, John Anthony Besañez, Ricksmer Cabatingan
+
+---
+
 ## Getting Started
 
 ### Requirements
