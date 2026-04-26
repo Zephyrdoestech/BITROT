@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnvwt2yjq0fi6"]
 
 [ext_resource type="Script" uid="uid://qw2pxlq8aqa2" path="res://Scenes/Objects/coding_bubble.gd" id="1_mve8n"]
-[ext_resource type="Texture2D" uid="uid://i5k4vrs8elk6" path="res://icon.svg" id="1_q74fl"]
+[ext_resource type="Texture2D" uid="uid://bvhwm61qobsns" path="res://Assets/finalAssets/Scenes/terminalbubble-clear.png" id="2_kuval"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qla5"]
 radius = 11.18034
@@ -15,7 +15,7 @@ shape = SubResource("CircleShape2D_6qla5")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1058885194]
 position = Vector2(2.3841858e-07, 7.1525574e-07)
 scale = Vector2(0.1015625, 0.1015625)
-texture = ExtResource("1_q74fl")
+texture = ExtResource("2_kuval")
 
 [node name="InteractPrompt" type="Label" parent="." unique_id=2145474734]
 offset_right = 40.0

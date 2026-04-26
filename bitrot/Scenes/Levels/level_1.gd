@@ -17,9 +17,9 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 			match index:
 				0:
 					if is_toggled:
-						lower_platform(platform)
+						hide_platform(platform)
 					else:
-						raise_platform(platform)
+						show_platform(platform)
 				1:
 					if is_toggled:
 						move_platform_right(platform)
@@ -27,16 +27,16 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 						move_platform_left(platform)
 				2:
 					if is_toggled:
-						hide_platform(platform)
+						lower_platform(platform)
 					else:
-						show_platform(platform)
+						raise_platform(platform)
 		1:  # Bubble 2 controls platform_2
 			match index:
 				0:
 					if is_toggled:
-						lower_platform(platform2)
+						hide_platform(platform2)
 					else:
-						raise_platform(platform2)
+						show_platform(platform2)
 				1:
 					if is_toggled:
 						move_platform_left(platform2)
@@ -44,16 +44,16 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 						move_platform_right(platform2)
 				2:
 					if is_toggled:
-						hide_platform(platform2)
+						lower_platform(platform2)
 					else:
-						show_platform(platform2)
+						raise_platform(platform2)
 		2: 
 			match index:
 				0:
 					if is_toggled:
-						lowerer_platform(platform3)
+						hide_platform(platform3)
 					else:
-						raiser_platform(platform3)
+						show_platform(platform3)
 				1:
 					if is_toggled:
 						move_platform_left(platform3)
@@ -61,9 +61,9 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 						move_platform_right(platform3)
 				2:
 					if is_toggled:
-						hide_platform(platform3)
+						lowerer_platform(platform3)
 					else:
-						show_platform(platform3)
+						raiser_platform(platform3)
 		3: 
 			match index:
 				0:
@@ -73,9 +73,9 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 						enableSecurity()
 				1:
 					if is_toggled:
-						move_platform_left(platform4)
+						move_platform_lefter(platform4)
 					else:
-						move_platform_right(platform4)
+						move_platform_righter(platform4)
 				2:
 					if is_toggled:
 						hide_platform(platform4)
@@ -84,19 +84,19 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 
 func lower_platform(platform: Node2D) -> void:
 	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y + 150, 1.0)
+	tween.tween_property(platform, "position:y", platform.position.y + 150, 0.3)
 
 func raise_platform(platform: Node2D) -> void:
 	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y - 150, 1.0)
+	tween.tween_property(platform, "position:y", platform.position.y - 150, 0.3)
 	
 func lowerer_platform(platform: Node2D) -> void:
 	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y + 200, 1.0)
+	tween.tween_property(platform, "position:y", platform.position.y + 200, 1.5)
 
 func raiser_platform(platform: Node2D) -> void:
 	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y - 200, 1.0)
+	tween.tween_property(platform, "position:y", platform.position.y - 200, 1.5)
 
 func move_platform_left(platform: Node2D) -> void:
 	var tween = create_tween()
@@ -105,6 +105,14 @@ func move_platform_left(platform: Node2D) -> void:
 func move_platform_right(platform: Node2D) -> void:
 	var tween = create_tween()
 	tween.tween_property(platform, "position:x", platform.position.x + 100, 1.0)
+
+func move_platform_lefter(platform: Node2D) -> void:
+	var tween = create_tween()
+	tween.tween_property(platform, "position:x", platform.position.x - 150, 1.0)
+
+func move_platform_righter(platform: Node2D) -> void:
+	var tween = create_tween()
+	tween.tween_property(platform, "position:x", platform.position.x + 150, 1.0)
 
 func hide_platform(platform: Node2D) -> void:
 	platform.visible = false
