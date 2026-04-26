@@ -7,6 +7,7 @@ extends Area2D
 @export var option_2_toggled: String = ""
 @export var option_3_default: String = ""
 @export var option_3_toggled: String = ""
+@export var blocked_options: Array[int] = []
 
 var player_nearby: bool = false
 
@@ -16,6 +17,7 @@ func _ready() -> void:
 func _process(_delta) -> void:
 	if player_nearby and Input.is_action_just_pressed("interact"):
 		GameManager.pause_game()
+		CodingWindow.blocked_indices = blocked_options  # ← uses this bubble's own setting
 		CodingWindow.open(
 			bubble_id,
 			[option_1_default, option_2_default, option_3_default],
