@@ -5,12 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="2_x5s1r"]
 [ext_resource type="Script" uid="uid://ck6wes232r84m" path="res://Scenes/Levels/area_2d.gd" id="3_62evj"]
 [ext_resource type="Script" uid="uid://b30pjksh1gwhs" path="res://Scenes/Levels/exit_zone.gd" id="4_lk1ev"]
-[ext_resource type="PackedScene" uid="uid://bnvwt2yjq0fi6" path="res://Scenes/Objects/CodingBubble.tscn" id="5_x5s1r"]
+[ext_resource type="Texture2D" uid="uid://c3hipxae8snnd" path="res://Assets/finalAssets/Scenes/level-3-bg-01.png" id="5_x5s1r"]
 [ext_resource type="PackedScene" uid="uid://ct0roar2v4nfv" path="res://Scenes/Objects/Platform.tscn" id="6_cbup6"]
 [ext_resource type="PackedScene" uid="uid://cbrxmqs1uic31" path="res://Scenes/Objects/Firewall.tscn" id="7_lk1ev"]
 [ext_resource type="PackedScene" uid="uid://8ymhg43t16wf" path="res://Scenes/Objects/DeathFloor.tscn" id="9_x6m50"]
 [ext_resource type="PackedScene" uid="uid://dilxdy0o2grkx" path="res://Scenes/Objects/flameshot.tscn" id="10_76n5f"]
-[ext_resource type="Texture2D" uid="uid://c3hipxae8snnd" path="res://Assets/finalAssets/Scenes/level-3-bg-01.png" id="5_x5s1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbup6"]
 texture = ExtResource("2_x5s1r")
@@ -142,7 +141,7 @@ shape = SubResource("RectangleShape2D_hkeaf")
 [node name="Platform" parent="." unique_id=10139939 instance=ExtResource("6_cbup6")]
 position = Vector2(1055, -315)
 
-[node name="CodingBubble" parent="." unique_id=2039141504 instance=ExtResource("5_x5s1r")]
+[node name="CodingBubble" parent="." unique_id=2039141504]
 position = Vector2(1065, -112)
 option_1_default = "SET FIREWALL = OFF"
 option_1_toggled = "SET FIREWALL = ON"
@@ -151,7 +150,7 @@ option_2_toggled = "Set Platform Y Level: -400"
 option_3_default = "Comment out Platform"
 option_3_toggled = "Comment in Platform"
 
-[node name="CodingBubble2" parent="." unique_id=1805389962 instance=ExtResource("5_x5s1r")]
+[node name="CodingBubble2" parent="." unique_id=1805389962]
 position = Vector2(1430, -18)
 bubble_id = 1
 option_1_default = "Set Platform Y Level: -400"
@@ -161,7 +160,7 @@ option_2_toggled = "Toggle DeathFloor = True"
 option_3_default = "Comment out Platform"
 option_3_toggled = "Comment in Platform"
 
-[node name="CodingBubble3" parent="." unique_id=1829608926 instance=ExtResource("5_x5s1r")]
+[node name="CodingBubble3" parent="." unique_id=1829608926]
 position = Vector2(2194, 743)
 bubble_id = 2
 option_1_default = "Comment out Platform"
@@ -182,6 +181,7 @@ position = Vector2(2760, 727)
 
 [node name="Flameshot2" parent="." unique_id=967961323 instance=ExtResource("10_76n5f")]
 position = Vector2(2760, 674)
+
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=74326062]
 z_index = -4096
 texture_filter = 1
