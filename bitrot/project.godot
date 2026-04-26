@@ -29,6 +29,10 @@ SceneManager="*uid://c36equa2pejxh"
 window/size/viewport_width=640
 window/size/viewport_height=360
 
+[global_group]
+
+player=""
+
 [input]
 
 jump={

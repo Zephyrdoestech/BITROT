@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b4f7gjchmuyvc"]
+
+[ext_resource type="Script" uid="uid://xu13wfgof52p" path="res://Scenes/Objects/flame.gd" id="1_7b3ub"]
+[ext_resource type="Texture2D" uid="uid://cf2swshmi0jct" path="res://Assets/testAssets/Assetssss/Sprites/portal - Copy.png" id="2_7b3ub"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7b3ub"]
+radius = 17.0
+
+[node name="Flame" type="Area2D" unique_id=1767471739]
+script = ExtResource("1_7b3ub")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=828923808]
+position = Vector2(0, 1.1920929e-07)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_7b3ub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1738226369]
+shape = SubResource("CircleShape2D_7b3ub")
