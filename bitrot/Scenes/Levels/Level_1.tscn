@@ -109,7 +109,7 @@ position = Vector2(1109, 102)
 position = Vector2(1499, 280)
 
 [node name="StartMarker" type="Marker2D" parent="." unique_id=1134300305]
-position = Vector2(34, -23)
+position = Vector2(-67, 28)
 
 [node name="Player" parent="." unique_id=1432339366 instance=ExtResource("1_q8yj7")]
 z_index = 1
