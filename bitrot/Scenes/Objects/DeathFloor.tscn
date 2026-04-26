@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://8ymhg43t16wf"]
+
+[ext_resource type="Script" uid="uid://bj5ba7ci82p5" path="res://Scenes/Objects/death_floor.gd" id="1_o563f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p88lq"]
+size = Vector2(161, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o563f"]
+size = Vector2(162, 31)
+
+[node name="DeathFloor" type="StaticBody2D" unique_id=711589646]
+script = ExtResource("1_o563f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1358567826]
+position = Vector2(80.5, 14.5)
+shape = SubResource("RectangleShape2D_p88lq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=824105720]
+offset_right = 161.0
+offset_bottom = 29.0
+color = Color(0.93333334, 0.29411766, 0.16862746, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=556844349]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1297209801]
+position = Vector2(81, 14.5)
+shape = SubResource("RectangleShape2D_o563f")

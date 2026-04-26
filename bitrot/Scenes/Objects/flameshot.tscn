@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dilxdy0o2grkx"]
+
+[ext_resource type="Script" uid="uid://b1p01frftx4ds" path="res://Scenes/Objects/flameshot.gd" id="1_4lx0o"]
+
+[node name="Flameshot" type="Node2D" unique_id=95361261]
+script = ExtResource("1_4lx0o")
+fall_speed = null
+return_speed = null
+wait_time = null
+slow_speed = null
+fast_speed = null
+
+[node name="Timer" type="Timer" parent="." unique_id=1527924674]

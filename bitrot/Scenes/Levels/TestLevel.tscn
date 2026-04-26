@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnvwt2yjq0fi6" path="res://Scenes/Objects/CodingBubble.tscn" id="3_7e5cw"]
 [ext_resource type="Texture2D" uid="uid://ctpb1ophummdx" path="res://Assets/finalAssets/Scenes/BrowserTileset.png" id="4_dqpvo"]
 [ext_resource type="Texture2D" uid="uid://dmofkxp8lrk54" path="res://Assets/finalAssets/Scenes/FileBrowserTileset-Godot.png" id="5_gyeg4"]
-[ext_resource type="Texture2D" uid="uid://bppxv7xsba00o" path="res://Assets/finalAssets/Scenes/CommandLineTileset.png" id="6_1mv4x"]
+[ext_resource type="Texture2D" uid="uid://r1rmnr3g3lhg" path="res://Assets/finalAssets/Scenes/CommandLineTileset.png" id="6_1mv4x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytf4i"]
 texture = ExtResource("1_ss4xl")
@@ -397,6 +397,14 @@ position = Vector2(1, -11)
 
 [node name="CodingWindow" parent="." unique_id=199849328 instance=ExtResource("3_7e5cw")]
 position = Vector2(178, -15)
+bubble_id = null
+option_1_default = null
+option_1_toggled = null
+option_2_default = null
+option_2_toggled = null
+option_3_default = null
+option_3_toggled = null
+blocked_options = null
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1028491878]
 z_index = -1
