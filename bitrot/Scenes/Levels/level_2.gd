@@ -60,23 +60,27 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 						spike4.slow_down()
 					else:
 						spike4.speed_up()
+func _create_tween():
+	var tween = create_tween();
+	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	return tween;
 
-func lower_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y + 150, 0.3)
+func lower_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y + 150, 0.3)
 
-func raise_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y - 150, 0.3)
-
-func lowerer_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y + 400, 0.5)
-
-func raiser_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y - 400, 0.5)
+func raise_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y, 0.3)
 	
+func lowerer_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y + 200, 1.5)
+
+func raiser_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y, 1.5)
+
 func hide_platform(platform: Node2D) -> void:
 	platform.visible = false
 	platform.get_node("CollisionShape2D").disabled = true

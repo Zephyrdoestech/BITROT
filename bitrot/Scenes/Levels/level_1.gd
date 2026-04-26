@@ -82,37 +82,42 @@ func _on_option_selected(bubble_id: int, index: int, is_toggled: bool) -> void:
 					else:
 						show_platform(platform4)
 
-func lower_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y + 150, 0.3)
+func _create_tween():
+	var tween = create_tween();
+	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	return tween;
 
-func raise_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y - 150, 0.3)
+func lower_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y + 150, 0.3)
+
+func raise_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y, 0.3)
 	
-func lowerer_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y + 200, 1.5)
+func lowerer_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y + 200, 1.5)
 
-func raiser_platform(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y - 200, 1.5)
+func raiser_platform(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:y", platform.original_position.y, 1.5)
 
-func move_platform_left(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:x", platform.position.x - 100, 1.0)
+func move_platform_left(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:x", platform.original_position.x, 1.0)
 
-func move_platform_right(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:x", platform.position.x + 100, 1.0)
+func move_platform_right(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:x", platform.original_position.x + 100, 1.0)
 
-func move_platform_lefter(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:x", platform.position.x - 150, 1.0)
+func move_platform_lefter(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:x", platform.original_position.x, 1.0)
 
-func move_platform_righter(platform: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(platform, "position:x", platform.position.x + 150, 1.0)
+func move_platform_righter(platform: Platform) -> void:
+	var tween = _create_tween()
+	tween.tween_property(platform, "position:x", platform.original_position.x + 150, 1.0)
 
 func hide_platform(platform: Node2D) -> void:
 	platform.visible = false
