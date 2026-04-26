@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ct0roar2v4nfv"]
 
+[ext_resource type="Script" uid="uid://wwmuxihhaphr" path="res://Scenes/Objects/platform.gd" id="1_3nl8n"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="1_6ofpv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyh3f"]
@@ -51,11 +52,13 @@ texture = ExtResource("1_6ofpv")
 [sub_resource type="TileSet" id="TileSet_hs11j"]
 sources/0 = SubResource("TileSetAtlasSource_ducwx")
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=10139939]
+[node name="StaticBody2D" type="AnimatableBody2D" unique_id=162443318]
+script = ExtResource("1_3nl8n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1685932150]
 position = Vector2(7.875, 7.5)
 shape = SubResource("RectangleShape2D_iyh3f")
+one_way_collision = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=672630799]
 tile_map_data = PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 3, 0, 0, 0)
