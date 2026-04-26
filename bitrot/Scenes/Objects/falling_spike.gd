@@ -3,6 +3,9 @@ extends Area2D
 @export var fall_speed: float = 400.0
 @export var return_speed: float = 1200.0
 @export var wait_time: float = 1.0 # Stays at the top for 1 second
+@export var slow_speed: float = 100.0
+@export var fast_speed: float = 800.0
+var original_fall_speed: float
 
 var start_position: Vector2
 var floor_y: float = 0.0
@@ -11,6 +14,7 @@ var is_waiting: bool = false
 
 func _ready():
 	start_position = position 
+	original_fall_speed = fall_speed
 	body_entered.connect(_on_body_entered)
 
 func _process(delta):
@@ -54,3 +58,12 @@ func _on_body_entered(body):
 		
 		# Instantly start going back up! (No waiting here anymore)
 		is_falling = false
+
+func slow_down() -> void:
+	fall_speed = slow_speed
+
+func speed_up() -> void:
+	fall_speed = fast_speed
+
+func reset_speed() -> void:
+	fall_speed = original_fall_speed
