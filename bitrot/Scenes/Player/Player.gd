@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 10.0
 @export var jump_power: float = 10.0
 @export var cayote_timer: Timer;
-@onready var anim = $AgentAnimator/AnimationPlayer
+@onready var anim = $AgentAnimator/Sprite2D
 
 
 var speed_multiplier = 30.0
@@ -49,6 +49,7 @@ func _physics_process(delta):
 	direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * speed * speed_multiplier
+		anim.flip_h = direction < 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
 		
