@@ -101,7 +101,7 @@ sources/0 = SubResource("TileSetAtlasSource_4ju3q")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jixyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axppo"]
-size = Vector2(27, 29)
+size = Vector2(33.5, 34.5)
 
 [node name="Level2" type="Node2D" unique_id=532370135]
 script = ExtResource("1_jixyi")
@@ -110,7 +110,7 @@ script = ExtResource("1_jixyi")
 position = Vector2(-382, -415)
 
 [node name="Player" parent="." unique_id=1432339366 groups=["player"] instance=ExtResource("1_qox7n")]
-position = Vector2(-361, -413)
+position = Vector2(-345, -403)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=698202863]
 position = Vector2(-2, 7)
@@ -125,12 +125,12 @@ script = ExtResource("3_ramdh")
 shape = SubResource("WorldBoundaryShape2D_jixyi")
 
 [node name="ExitZone" type="Area2D" parent="." unique_id=664514241]
-position = Vector2(-3, -423)
+position = Vector2(23, -424)
 script = ExtResource("5_n6t8q")
 next_level = "res://Scenes/Levels/Level_3.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone" unique_id=2044712169]
-visible = false
+position = Vector2(-26.75, 11.25)
 shape = SubResource("RectangleShape2D_axppo")
 
 [node name="FallingSpike" parent="." unique_id=983929909 instance=ExtResource("6_4ju3q")]
@@ -197,6 +197,7 @@ position = Vector2(507, -339)
 position = Vector2(261, -411)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=855100983]
+visible = false
 z_index = -4096
 texture_filter = 1
 
