@@ -184,7 +184,7 @@ option_3_default = "Comment out Platform"
 option_3_toggled = "Comment in Platform"
 
 [node name="Firewall" parent="." unique_id=1618554889 instance=ExtResource("8_ducwx")]
-position = Vector2(1368, 67)
+position = Vector2(1339, 73)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]

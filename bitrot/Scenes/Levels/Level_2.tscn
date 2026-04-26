@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://v24njb8476op" path="res://Scenes/Levels/level_2.gd" id="1_jixyi"]
 [ext_resource type="PackedScene" uid="uid://br6xpr5iqnqyo" path="res://Scenes/Player/Player.tscn" id="1_qox7n"]
-[ext_resource type="Texture2D" uid="uid://cffgypqde3poe" path="res://Assets/finalAssets/Scenes/level-2-bg.jpg" id="2_axppo"]
+[ext_resource type="Texture2D" uid="uid://5vi3iiieuuyu" path="res://Assets/finalAssets/Scenes/FOR-PARALLAX_level-2-bg.png" id="2_axppo"]
 [ext_resource type="Texture2D" uid="uid://ntb0befljsre" path="res://Assets/testAssets/Assetssss/Sprites/tiles_1.png" id="2_ramdh"]
 [ext_resource type="Script" uid="uid://ck6wes232r84m" path="res://Scenes/Levels/area_2d.gd" id="3_ramdh"]
 [ext_resource type="Script" uid="uid://b30pjksh1gwhs" path="res://Scenes/Levels/exit_zone.gd" id="5_n6t8q"]
@@ -108,9 +108,11 @@ script = ExtResource("1_jixyi")
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=143479530]
 visible = false
 scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(3840, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1183036016]
-position = Vector2(-786, -768)
+position = Vector2(-1200, -1431)
+scale = Vector2(1.623, 2)
 texture = ExtResource("2_axppo")
 centered = false
 
