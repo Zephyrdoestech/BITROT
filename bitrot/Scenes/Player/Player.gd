@@ -1,10 +1,19 @@
 extends CharacterBody2D
 
+@onready var camera = $Camera2D2
+
+@export var peek_strength: float = 60.0
+@export var peek_smoothing: float = 8.0
+var _peek_offset: Vector2 = Vector2.ZERO
+
+# Free pan
+var _is_panning: bool = false
+var _pan_target: Vector2 = Vector2.ZERO
+
 @export var speed: float = 10.0
 @export var jump_power: float = 10.0
 @export var cayote_timer: Timer;
-#@onready var anim = $AgentAnimator/Sprite2D
-
+@onready var anim = $AgentAnimator/Sprite2D
 
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
@@ -29,11 +38,11 @@ func _physics_process(delta):
 			#anim.play("fall")
 		else:
 			velocity.y += gravity * delta
-			#anim.play("jump")
-	#elif direction != 0:
-		#anim.play("walk")	
-	#else:
-		#anim.play("idle")
+			anim.play("jump")
+	elif direction != 0:
+		anim.play("walk")	
+	else:
+		anim.play("idle")
 	
 	# cayote jump logic (better for the lungs)
 	if was_on_floor && !is_on_floor() && velocity.y >= 0:
@@ -49,11 +58,33 @@ func _physics_process(delta):
 	direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * speed * speed_multiplier
-		#anim.flip_h = direction < 0
+		anim.flip_h = direction < 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
 		
 	move_and_slide()
+	var mouse_world = get_global_mouse_position()
+
+	if Input.is_action_just_pressed("pan_map"):
+		_is_panning = true
+		camera.top_level = true  # detach camera from player
+
+	if Input.is_action_just_released("pan_map"):
+		_is_panning = false
+		camera.top_level = false  # re-attach to player
+		camera.offset = Vector2.ZERO
+
+	if _is_panning: 
+		# camera roams freely to mouse world position
+		camera.global_position = camera.global_position.lerp(mouse_world, peek_smoothing * delta)
+	else:
+		# normal peek behaviour
+		var viewport_center = get_viewport_rect().size / 2.0
+		var mouse_pos = get_viewport().get_mouse_position()
+		var mouse_dir = (mouse_pos - viewport_center).normalized()
+		_peek_offset = _peek_offset.lerp(mouse_dir * peek_strength, peek_smoothing * delta)
+		camera.offset = _peek_offset
+	
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

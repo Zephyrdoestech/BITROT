@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cbrxmqs1uic31" path="res://Scenes/Objects/Firewall.tscn" id="7_lk1ev"]
 [ext_resource type="PackedScene" uid="uid://8ymhg43t16wf" path="res://Scenes/Objects/DeathFloor.tscn" id="9_x6m50"]
 [ext_resource type="PackedScene" uid="uid://dilxdy0o2grkx" path="res://Scenes/Objects/flameshot.tscn" id="10_76n5f"]
+[ext_resource type="Texture2D" uid="uid://c3hipxae8snnd" path="res://Assets/finalAssets/Scenes/level-3-bg-01.png" id="5_x5s1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbup6"]
 texture = ExtResource("2_x5s1r")
@@ -181,5 +182,13 @@ position = Vector2(2760, 727)
 
 [node name="Flameshot2" parent="." unique_id=967961323 instance=ExtResource("10_76n5f")]
 position = Vector2(2760, 674)
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=74326062]
+z_index = -4096
+texture_filter = 1
+scroll_offset = Vector2(-100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=835587900]
+position = Vector2(2889, -957)
+texture = ExtResource("5_x5s1r")
 
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]
