@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ca2v8n1ypcywb"]
+[gd_scene format=3 uid="uid://b2sqg8gycj8o1"]
 
 [ext_resource type="Texture2D" uid="uid://d2twas6sbh6jg" path="res://Assets/testAssets/Assetssss/Sprites/player.png" id="1_g18y6"]
 [ext_resource type="PackedScene" uid="uid://48hvbjhvso4o" path="res://Scenes/UI/Components/GameButton/GameButton.tscn" id="2_mjmdf"]

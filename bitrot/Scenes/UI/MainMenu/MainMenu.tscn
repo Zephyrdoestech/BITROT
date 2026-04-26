@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://cncb6cr6ksqs6"]
 
-[ext_resource type="Texture2D" uid="uid://d2twas6sbh6jg" path="res://Assets/testAssets/Assetssss/Sprites/player.png" id="2_gwdte"]
 [ext_resource type="PackedScene" uid="uid://48hvbjhvso4o" path="res://Scenes/UI/Components/GameButton/GameButton.tscn" id="3_7nukq"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjmdf"]
-texture = ExtResource("2_gwdte")
+[ext_resource type="Texture2D" uid="uid://svldamfjol8g" path="res://Assets/finalAssets/Scenes/TitleScreen.png" id="3_ehq06"]
 
 [node name="MainMenu" type="Control" unique_id=1255529108]
 layout_mode = 3
@@ -16,38 +13,43 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ARTBG_HERE" type="PanelContainer" parent="." unique_id=1682623449]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=494724398]
+z_index = -4096
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_mjmdf")
+texture = ExtResource("3_ehq06")
+expand_mode = 1
+metadata/_edit_group_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="ARTBG_HERE" unique_id=723599237]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=723599237]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ARTBG_HERE/MarginContainer" unique_id=48760421]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=48760421]
 custom_minimum_size = Vector2(250, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="Spin" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=348457698 instance=ExtResource("3_7nukq")]
+[node name="Spin" parent="MarginContainer/HBoxContainer" unique_id=348457698 instance=ExtResource("3_7nukq")]
 layout_mode = 2
 text = "SPIN"
 
-[node name="Play" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=902965373 instance=ExtResource("3_7nukq")]
+[node name="Play" parent="MarginContainer/HBoxContainer" unique_id=902965373 instance=ExtResource("3_7nukq")]
 layout_mode = 2
 text = "PLAY"
 transition_scene_key = "levels"
 
-[node name="Credits" parent="ARTBG_HERE/MarginContainer/HBoxContainer" unique_id=2012487435 instance=ExtResource("3_7nukq")]
+[node name="Credits" parent="MarginContainer/HBoxContainer" unique_id=2012487435 instance=ExtResource("3_7nukq")]
 layout_mode = 2
 text = "CREDITS"
