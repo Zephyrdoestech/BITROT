@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ct0roar2v4nfv" path="res://Scenes/Objects/Platform.tscn" id="4_iyh3f"]
 [ext_resource type="PackedScene" uid="uid://bnvwt2yjq0fi6" path="res://Scenes/Objects/CodingBubble.tscn" id="6_ybqp2"]
 [ext_resource type="PackedScene" uid="uid://cbrxmqs1uic31" path="res://Scenes/Objects/Firewall.tscn" id="8_ducwx"]
+[ext_resource type="Texture2D" uid="uid://tpra13ehprio" path="res://Assets/finalAssets/Scenes/layer-1-bg.png" id="9_hs11j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybqp2"]
 texture = ExtResource("2_87l2y")
@@ -185,6 +186,15 @@ option_3_toggled = "Comment in Platform"
 
 [node name="Firewall" parent="." unique_id=1618554889 instance=ExtResource("8_ducwx")]
 position = Vector2(1301, 72)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1696737489]
+z_index = -4096
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=902217884]
+position = Vector2(733.5, 77.99992)
+scale = Vector2(1.7640625, 1.9148147)
+texture = ExtResource("9_hs11j")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]
