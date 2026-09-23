@@ -159,7 +159,6 @@ res://
 | `AudioManager.gd` | Global audio — SFX and music playback |
 | `SaveManager.gd` | Save/load game progress |
 
----
 
 ## Notes
 - All scripts in `Scripts/` are registered as **Autoloads** (singletons) under `Project → Project Settings → Globals → Autoload`
